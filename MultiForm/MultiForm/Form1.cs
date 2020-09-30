@@ -20,15 +20,31 @@ namespace MultiForm
         private void btnForm2_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2(); // dichiarazione form2
+            f2.Text = "Aperto Senza Parametro";
             f2.Show(); // visualizza form
 
+            Form2 f2b = new Form2(10);
+            f2b.Text = "Aperto Con Parametro";
+            f2b.Show();
         }
 
         private void btnForm2B_Click(object sender, EventArgs e)
         {
             Form f2b = new Form(); // senza utilizzare classi
             f2b.Text = "Aperta Form Dinamica";
-            f2b.Show(); 
+            f2b.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPassa_Click(object sender, EventArgs e)
+        {
+            Form2 f2b = new Form2(txtPassata);
+            f2b.Text = "Form 2 con passaggio di textbox";
+            f2b.Show();
         }
     }
 }
