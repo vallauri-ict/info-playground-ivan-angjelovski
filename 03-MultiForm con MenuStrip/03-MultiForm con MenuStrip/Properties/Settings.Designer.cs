@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MultiForm.Properties
+namespace _03_MultiForm_con_MenuStrip.Properties
 {
 
 

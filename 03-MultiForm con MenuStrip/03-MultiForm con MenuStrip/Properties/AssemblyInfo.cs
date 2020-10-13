@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Le informazioni generali relative a un assembly sono controllate dal seguente 
 // set di attributi. Modificare i valori di questi attributi per modificare le informazioni
 // associate a un assembly.
-[assembly: AssemblyTitle("MultiForm")]
+[assembly: AssemblyTitle("03-MultiForm con MenuStrip")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MultiForm")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyProduct("03-MultiForm con MenuStrip")]
+[assembly: AssemblyCopyright("Copyright © HP Inc. 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Se il progetto viene esposto a COM, il GUID seguente verrà utilizzato come ID della libreria dei tipi
-[assembly: Guid("c539e159-8a0d-456e-a1b3-61060a6f27b9")]
+[assembly: Guid("465dba12-10d3-4694-ade2-13f8aa6cf6ee")]
 
 // Le informazioni sulla versione di un assembly sono costituite dai seguenti quattro valori:
 //
