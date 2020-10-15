@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -47,7 +48,17 @@ namespace _04_Esercitazione_Form_e_Menù
 
         private void btnInviaAFiglia_Click(object sender, EventArgs e)
         {
-            
+            // non so come far sì che la form si refreshi senza che si debba chiudere
+        }
+
+        private void newMDIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MDI FormMDI = new MDI();
+            FormMDI.Text = "Questa è una form MDI";
+            FormMDI.MdiParent = this;
+            FormMDI.StartPosition = FormStartPosition.Manual;
+            FormMDI.Location = new Point(0, 120);
+            FormMDI.Show();
         }
     }
 }

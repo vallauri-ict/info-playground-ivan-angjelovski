@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace _04_Esercitazione_Form_e_Menù
 {
-    public partial class Figlia : Form
+    public partial class MDI : Form
     {
-        public Figlia(TextBox txtForm1)
+        public MDI()
         {
             InitializeComponent();
-            txtFiglia.Text = txtForm1.Text;
         }
     }
 }

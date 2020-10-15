@@ -1,6 +1,6 @@
 ﻿namespace _04_Esercitazione_Form_e_Menù
 {
-    partial class Figlia
+    partial class MDI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtFiglia = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtFiglia
+            // label1
             // 
-            this.txtFiglia.Location = new System.Drawing.Point(13, 13);
-            this.txtFiglia.Name = "txtFiglia";
-            this.txtFiglia.Size = new System.Drawing.Size(171, 22);
-            this.txtFiglia.TabIndex = 0;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(649, 69);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Questa è una form MDI";
             // 
-            // Figlia
+            // MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(196, 45);
-            this.Controls.Add(this.txtFiglia);
-            this.Name = "Figlia";
-            this.Text = "Figlia";
+            this.ClientSize = new System.Drawing.Size(725, 94);
+            this.Controls.Add(this.label1);
+            this.Name = "MDI";
+            this.Text = "MDI";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -53,6 +56,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtFiglia;
+        private System.Windows.Forms.Label label1;
     }
 }
