@@ -1,5 +1,5 @@
-# info-playground-MarengoSimone
+# info-playground-ivan-angjelovski
 
-_Stud. Marengo Simone_
+_Stud. Angjelovski Ivan_
 
 ### Progetto 7: Primo esercizio con utilizzo della classe Singleton

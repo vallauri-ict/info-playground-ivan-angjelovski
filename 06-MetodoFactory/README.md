@@ -1,5 +1,5 @@
-# info-playground-MarengoSimone
+# info-playground-ivan-angjelovski
 
-_Stud. Marengo Simone_
+_Stud. Angjelovski Ivan_
 
-### Progetto 6: Primo esercizio sull'utilizzo dei metodi Factory
+### Progetto 6: Esercizio sull'utilizzo dei metodi Factory
