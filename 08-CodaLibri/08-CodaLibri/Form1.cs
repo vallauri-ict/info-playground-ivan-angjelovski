@@ -23,7 +23,6 @@ namespace _08_CodaLibri
             {
                 Singleton s = Singleton.GetClsSingleton();
                 s.push(txtLibro.Text);
-
             }
             else
             {
