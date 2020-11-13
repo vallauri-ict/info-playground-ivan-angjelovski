@@ -1,0 +1,10 @@
+C:\Users\iangj\Desktop\info-playground-ivan-angjelovski\11-Form Di Registrazione\11-Form Di Registrazione\bin\Debug\11-Form Di Registrazione.exe.config
+C:\Users\iangj\Desktop\info-playground-ivan-angjelovski\11-Form Di Registrazione\11-Form Di Registrazione\bin\Debug\11-Form Di Registrazione.exe
+C:\Users\iangj\Desktop\info-playground-ivan-angjelovski\11-Form Di Registrazione\11-Form Di Registrazione\bin\Debug\11-Form Di Registrazione.pdb
+C:\Users\iangj\Desktop\info-playground-ivan-angjelovski\11-Form Di Registrazione\11-Form Di Registrazione\obj\Debug\11-Form Di Registrazione.csprojAssemblyReference.cache
+C:\Users\iangj\Desktop\info-playground-ivan-angjelovski\11-Form Di Registrazione\11-Form Di Registrazione\obj\Debug\_11_Form_Di_Registrazione.Form1.resources
+C:\Users\iangj\Desktop\info-playground-ivan-angjelovski\11-Form Di Registrazione\11-Form Di Registrazione\obj\Debug\_11_Form_Di_Registrazione.Properties.Resources.resources
+C:\Users\iangj\Desktop\info-playground-ivan-angjelovski\11-Form Di Registrazione\11-Form Di Registrazione\obj\Debug\11-Form Di Registrazione.csproj.GenerateResource.cache
+C:\Users\iangj\Desktop\info-playground-ivan-angjelovski\11-Form Di Registrazione\11-Form Di Registrazione\obj\Debug\11-Form Di Registrazione.csproj.CoreCompileInputs.cache
+C:\Users\iangj\Desktop\info-playground-ivan-angjelovski\11-Form Di Registrazione\11-Form Di Registrazione\obj\Debug\11-Form Di Registrazione.exe
+C:\Users\iangj\Desktop\info-playground-ivan-angjelovski\11-Form Di Registrazione\11-Form Di Registrazione\obj\Debug\11-Form Di Registrazione.pdb
