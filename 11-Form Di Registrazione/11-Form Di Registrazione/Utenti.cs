@@ -1,22 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace _11_Form_Di_Registrazione
 {
     class Utenti
     {
+        
 
-
-        public static Utenti caricaUtente(string cognome, string nome, string indirizzo, string citta,
-            string cap, string mail, string codfisc, string username, string password)
+        internal static void inserisciDati(TextBox txtCognome, TextBox txtCAP, TextBox txtCitta, TextBox txtCodFisc, TextBox txtIndirizzo, TextBox txtMail, TextBox txtNome, TextBox txtUsername, TextBox txtPassword)
         {
-           /*MessageBox.Show("Campi corretti e salvati nel file");
             StreamWriter sw = new StreamWriter("dati.txt", false);
-
-            //vado ad inserire i dati nel file di testo
             string s = "";
             s = "Cognome: " + txtCognome.Text;
             sw.WriteLine(s);
@@ -26,24 +24,18 @@ namespace _11_Form_Di_Registrazione
             sw.WriteLine(s);
             s = "Città: " + txtCitta.Text;
             sw.WriteLine(s);
-            s = "CAP: " + txtCap.Text;
+            s = "CAP: " + txtCAP.Text;
             sw.WriteLine(s);
             s = "Mail: " + txtMail.Text;
             sw.WriteLine(s);
-            s = "Codice fisacle: " + txtCod.Text;
+            s = "Codice fiscale: " + txtCodFisc.Text;
             sw.WriteLine(s);
-            s = "Username: " + txtUser.Text;
+            s = "Username: " + txtUsername.Text;
             sw.WriteLine(s);
             s = "Password: " + txtPassword.Text;
             sw.WriteLine(s);
 
-            sw.Close();*/
-        }
-
-        public static Utenti caricaUtente((string cognome, string nome, string indirizzo, string citta,
-            string cap, string mail, string codfisc, string username, string password) p)
-        {
-            throw new NotImplementedException();
+            sw.Close();
         }
     }
 }

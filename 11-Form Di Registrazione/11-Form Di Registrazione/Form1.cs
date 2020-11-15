@@ -21,142 +21,69 @@ namespace _11_Form_Di_Registrazione
         private void btnRegistra_Click(object sender, EventArgs e)
         {
             bool valido = true;
+            string nomeUtente = "";
 
-            // cognome
-            if (txtCognome.Text == "")
-            {
-                MessageBox.Show("Cognome non inserito!");
-                valido = false;
-                txtCognome.BackColor = Color.Salmon;
-            }
-            else if (!Regex.IsMatch(txtCognome.Text, @"^[A-Z]{1}[a-z]+$"))
-            {
-                MessageBox.Show("Formato cognome non valido!");
-                valido = false;
-                txtCognome.BackColor = Color.Salmon;
-            }
+            //cognome
+            Regex cognome = new Regex(@"^[A-Z]{1}[a-z]+$");
+            controllaValido(txtCognome, cognome, ref valido, "cognome");
 
-            // nome
-            if (txtCognome.Text == "")
-            {
-                MessageBox.Show("Nome non inserito!");
-                valido = false;
-                txtNome.BackColor = Color.Salmon;
-            }
-            else if (!Regex.IsMatch(txtNome.Text, @"^[A-Z]{1}[a-z]+$"))
-            {
-                MessageBox.Show("Formato nome non valido!");
-                valido = false;
-                txtNome.BackColor = Color.Salmon;
-            }
+            //nome
+            Regex nome = new Regex(@"^[A-Z]{1}[a-z]+$");
+            controllaValido(txtNome, nome, ref valido, "nome");
 
-            // Indirizzo
-            if (txtIndirizzo.Text == "")
-            {
-                MessageBox.Show("Indirizzo non inserito!");
-                valido = false;
-                txtIndirizzo.BackColor = Color.Salmon;
-            }
-            else if (!Regex.IsMatch(txtIndirizzo.Text, @"^[A-Za-z\s]+\s\d+$"))
-            {
-                MessageBox.Show("Formato indirizzo non valido!");
-                valido = false;
-                txtIndirizzo.BackColor = Color.Salmon;
-            }
+            //indirizzo
+            Regex indirizzo = new Regex(@"^[A-Z]{1}[a-z]{2}\s[A-Z]{1}[a-z]{1,10}\s\d{1,3}$");
+            controllaValido(txtIndirizzo, indirizzo, ref valido, "indirizzo");
 
-            // città
-            if (txtCitta.Text == "")
-            {
-                MessageBox.Show("Città non inserita!");
-                valido = false;
-                txtCitta.BackColor = Color.Salmon;
-            }
-            else if (!Regex.IsMatch(txtCitta.Text, @"^[A-Z]{1}[a-z]+$"))
-            {
-                MessageBox.Show("Formato città non valido!");
-                valido = false;
-                txtCitta.BackColor = Color.Salmon;
-            }
+            //citta
+            Regex citta = new Regex(@"^[A-Z]{1}[a-z]{1,15}$");
+            controllaValido(txtCitta, citta, ref valido, "città");
 
-            // CAP
-            if (txtCAP.Text == "")
-            {
-                MessageBox.Show("CAP non inserito!");
-                valido = false;
-                txtCAP.BackColor = Color.Salmon;
-            }
-            else if (!Regex.IsMatch(txtCAP.Text, @"^\d{5}$"))
-            {
-                MessageBox.Show("Formato CAP non valido!");
-                valido = false;
-                txtCAP.BackColor = Color.Salmon;
-            }
+            //cap
+            Regex cap = new Regex(@"\d{5}");
+            controllaValido(txtCAP, cap, ref valido, "CAP");
 
-            // mail
-            if (txtMail.Text == "")
-            {
-                MessageBox.Show("Mail non inserita!");
-                valido = false;
-                txtMail.BackColor = Color.Salmon;
-            }
-            else if (!Regex.IsMatch(txtMail.Text, @"^[a-z._-]+\@[a-z]+\.[a-z]{2,6}"))
-            {
-                MessageBox.Show("Formato mail non valido!");
-                valido = false;
-                txtMail.BackColor = Color.Salmon;
-            }
+            //mail
+            Regex mail = new Regex(@"^[A-z0-9\.\+_-]+@[A-z0-9\._-]+\.[A-z]{2,6}$");
+            controllaValido(txtMail, mail, ref valido, "mail");
 
-            // codice fiscale
-            if (txtCodFisc.Text == "")
-            {
-                MessageBox.Show("Codice fiscale non inserito!");
-                valido = false;
-                txtCodFisc.BackColor = Color.Salmon;
-            }
-            else if (!Regex.IsMatch(txtCodFisc.Text, @"^[A-Z\d]+$"))
-            {
-                MessageBox.Show("Formato codice fiscale non valido!");
-                valido = false;
-                txtCodFisc.BackColor = Color.Salmon;
-            }
+            //codice fiscale
+            Regex cod = new Regex(@"^[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z]$");
+            controllaValido(txtCodFisc, cod, ref valido, "codice fiscale");
 
-            // username
-            if (txtUsername.Text == "")
-            {
-                MessageBox.Show("Username non inserito!");
-                valido = false;
-                txtUsername.BackColor = Color.Salmon;
-            }
-            else if (!Regex.IsMatch(txtUsername.Text, @"^[A-Za-z]+$"))
-            {
-                MessageBox.Show("Formato username non valido!");
-                valido = false;
-                txtUsername.BackColor = Color.Salmon;
-            }
+            //username
+            Regex user = new Regex(@"^[A-Z]{1}[a-z]+$");
+            controllaValido(txtUsername, user, ref valido, "username");
 
-            // password
-            if (txtPassword.Text == "")
-            {
-                MessageBox.Show("Password non inserita!");
-                valido = false;
-                txtPassword.BackColor = Color.Salmon;
-            }
-            else if (!Regex.IsMatch(txtPassword.Text, @"^((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20})$"))
-            {
-                MessageBox.Show("Formato password non valido!");
-                valido = false;
-                txtPassword.BackColor = Color.Salmon;
-            }
+            //password
+            Regex password = new Regex(@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$");
+            controllaValido(txtPassword, password, ref valido, "password");
 
+            //controllo dei campi
             if (valido)
             {
-                MessageBox.Show("Registrazione eseguita con successo!");
-                Utenti utente = Utenti.caricaUtente((txtCognome.Text, txtNome.Text, txtIndirizzo.Text, txtCitta.Text,
-                    txtCAP.Text, txtMail.Text, txtCodFisc.Text, txtUsername.Text, txtPassword.Text));
+                MessageBox.Show("Dati corretti e inseriti nel file");
+                //vado ad inserire i dati nel file di testo
+                Utenti.inserisciDati(txtCognome, txtCAP, txtCitta, txtCodFisc, txtIndirizzo, txtMail, txtNome, txtUsername, txtPassword);
+            }
+        }
+
+        private void controllaValido(TextBox txt, Regex rgx, ref bool valido, string campo)
+        {
+            if (txt.Text == "")
+            {
+                MessageBox.Show(campo + " mancante");
+                valido = false;
+                txt.Focus();
             }
             else
             {
-                MessageBox.Show("Registrazione fallita!");
+                if (!rgx.IsMatch(txt.Text))
+                {
+                    valido = false;
+                    MessageBox.Show(campo + " non valido");
+                    txt.Focus();
+                }
             }
         }
     }

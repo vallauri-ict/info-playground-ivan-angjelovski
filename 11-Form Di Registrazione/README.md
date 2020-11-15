@@ -2,8 +2,6 @@
 
 _Stud. Ivan Angjelovski_
 
-Esercizio su Regex:
-
 Form di registrazione:
 cognome
 nome
