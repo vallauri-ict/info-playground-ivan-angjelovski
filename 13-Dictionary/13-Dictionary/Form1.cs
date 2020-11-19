@@ -23,25 +23,26 @@ namespace _13_Dictionary
             public string autore;
         }
         public int i = 0;
-        Dictionary<int, libro> dizionarioLibri = new Dictionary<int, libro>();
+        // interfaccia -> classe in cui sono presenti solo le firme dei metodi
+        Dictionary<int, libro> dictionary = new Dictionary<int, libro>();
 
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
             libro l;
             l.titolo = txtTitolo.Text;
             l.autore = txtAutore.Text;
-            dizionarioLibri.Add(i, l);
+            dictionary.Add(i, l);
             i++;
-            MessageBox.Show("Libro aggiunto correttamente");
+            MessageBox.Show("Aggiunto correttamente");
         }
 
         private void btnVisualizza_Click_1(object sender, EventArgs e)
         {
-            foreach (int key in dizionarioLibri.Keys)
+            foreach (int key in dictionary.Keys)
                 MessageBox.Show(Convert.ToString(key + 1), "N° libro");   // stampa di fatto dell'indice nel dictionary (+ 1 così parte da 1)
 
-            foreach (libro l in dizionarioLibri.Values)
-                MessageBox.Show(l.titolo + " " + l.autore, "Libri inseriti");  // stampa elementi
+            foreach (libro l in dictionary.Values)
+                MessageBox.Show(l.titolo + " " + l.autore, "Libro");  // stampa elementi
         }
     }
 }
