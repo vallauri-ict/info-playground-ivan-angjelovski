@@ -1,3 +1,3 @@
 # info-playground-ivan-angjelovski
 
-_Stud. Ivan Angjelovski_
+_Stud. Ivan Angjelovski_ 
