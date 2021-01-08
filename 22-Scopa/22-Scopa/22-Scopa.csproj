@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CFE0E857-79C4-481F-A147-CA003483E0BA}</ProjectGuid>
+    <ProjectGuid>{3509AFF8-ECD9-4E5E-8FA8-80A36BE7E27C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>_21_OOP_Complessi_e_Quaternioni</RootNamespace>
-    <AssemblyName>21-OOP Complessi e Quaternioni</AssemblyName>
+    <RootNamespace>_22_Scopa</RootNamespace>
+    <AssemblyName>22-Scopa</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Complesso.cs" />
+    <Compile Include="Carta.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,10 +55,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quaternione.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

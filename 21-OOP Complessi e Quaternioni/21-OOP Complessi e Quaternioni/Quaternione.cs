@@ -8,29 +8,49 @@ namespace _21_OOP_Complessi_e_Quaternioni
 {
     class Quaternione : Complesso
     {
-        private double j;
-        private double k;
+        private double c;
+        private double d;
 
-        public double J 
+        public double C 
         { 
-            get => j; 
-            set => j = value; 
+            get => c; 
+            set => c = value; 
         }
 
-        public double K 
+        public double D 
         { 
-            get => k; 
-            set => k = value; 
+            get => d; 
+            set => d = value; 
         }
 
-        public Quaternione()
+        public Quaternione() : base()
         {
 
         }
 
-        public Quaternione(double immaginario)
+        public Quaternione(double immaginario) : base(immaginario)
         {
 
+
+        }
+        public Quaternione(double reale, double immaginario) : this(reale, immaginario, 0, 0)
+        {
+
+        }
+        public Quaternione(double reale, double immaginario, double immaginarioC) : this(reale, immaginario, immaginarioC, 0)
+        {
+
+        }
+        public Quaternione(double reale, double immaginario, double immaginarioC, double immaginarioD) : base(reale, immaginario)
+        {
+            C = immaginarioC;
+            D = immaginarioD;
+        }
+
+        new public double Modulo()
+        {
+            double somma = Math.Pow(Reale, 2) + Math.Pow(Immaginario, 2) + Math.Pow(C, 2) + Math.Pow(D, 2);
+            return Math.Sqrt(somma);
         }
     }
 }

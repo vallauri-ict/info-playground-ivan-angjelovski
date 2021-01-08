@@ -17,7 +17,7 @@ namespace _21_OOP_Complessi_e_Quaternioni
 
         }
 
-        public Complesso(double immaginario) : this(1, immaginario)
+        public Complesso(double immaginario) : this(0, immaginario)
         {
 
         }
