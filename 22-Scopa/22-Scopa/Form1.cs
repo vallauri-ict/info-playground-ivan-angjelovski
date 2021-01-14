@@ -16,5 +16,10 @@ namespace _22_Scopa
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Mano mano = new Mano();
+        }
     }
 }
