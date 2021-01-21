@@ -9,27 +9,28 @@ namespace _22_Scopa
     class Giocatore
     {
         private string nome;
-        private Mano mano;
-        private Mano prese;
+        Mano mano;
+        List<Carta> prese = new List<Carta>();    //di tipo mano? più corretto di tipo carta
 
         public Giocatore(string nome)
         {
-            
+            this.nome = nome;
+            mano = new Mano();
+            prese.Clear();
+        }
+        public Mano Lettura()
+        {
+            return mano;
         }
 
-        void Prese()
+        public List<Carta> Prese()
         {
-
+            return prese;
         }
 
-        void Lettura()
+        public void Gioca(int indice)
         {
-
-        }
-
-        void Gioca()
-        {
-
+            Carta giocata = mano.Gioca(indice);
         }
     }
 }

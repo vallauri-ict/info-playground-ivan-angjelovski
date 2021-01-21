@@ -13,13 +13,19 @@ namespace _22_Scopa
         private string seme;
         private int valore;
 
-        public string SEME
+        public Carta(int valore, string seme)
+        {
+            Seme = seme;
+            Valore = valore;
+        }
+
+        public string Seme
         {
             get => seme;
             set => seme = value;
         }
 
-        public int VALORE
+        public int Valore
         {
             get => valore;
             set => valore = value;

@@ -9,25 +9,22 @@ namespace _22_Scopa
 {
     class Mano
     {
-        Mazzo mazzo = new Mazzo();
+        List<Carta> mano = new List<Carta>();
 
         public Mano()
         {
-            mazzo.MAZZO.Clear();
-            MessageBox.Show(mazzo.MAZZO.Count.ToString());
+            mano.Clear();
+        }
+        public List<Carta> Lettura()
+        {
+            return mano;
         }
 
-        void Lettura()
+        public Carta Gioca(int indice)
         {
-            foreach (var item in mazzo.MAZZO)
-            {
-                MessageBox.Show("Valore: " + item.VALORE.ToString() + "\nSeme: " + item.SEME.ToString());
-            }
-        }
-
-        void Gioca()
-        {
-
+            Carta aus = mano.ElementAt(indice);
+            mano.RemoveAt(indice);
+            return aus;
         }
     }
 }

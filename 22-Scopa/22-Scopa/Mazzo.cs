@@ -9,37 +9,39 @@ namespace _22_Scopa
 {
     class Mazzo
     {
-        private List<Carta> mazzo = new List<Carta>();
-        string[] semi = { "quadri", "picche", "fiori", "cuori" };
-        Carta nuovaCarta;
-
-        public List<Carta> MAZZO
-        {
-            get => mazzo;
-            set => mazzo = value;
-        }
+        public List<Carta> mazzo = new List<Carta>();
+        string[] semi = { "Denari", "Bastoni", "Spade", "Coppe" };
+        Random rnd = new Random();
 
         public Mazzo()
         {
             for (int i = 0; i < 40; i++)
             {
-                Random rnd = new Random();
-                nuovaCarta = new Carta();
-                nuovaCarta.VALORE = rnd.Next(1, 11);
-                nuovaCarta.SEME = semi[rnd.Next(0, 4)];
-                MessageBox.Show(nuovaCarta.VALORE + " " + nuovaCarta.SEME, (i + 1).ToString());
+                int val = rnd.Next(1, 11);
+                string seme = semi[rnd.Next(0, 4)];
+                Carta nuovaCarta = new Carta(val, seme);
                 mazzo.Add(nuovaCarta);
             }
         }
 
-        private void mescola()
+        public void Mescola()
         {
-
+            Carta aus;
+            int l = mazzo.Count;//per evitare errore sulla modifica della lista
+            for (int i = 0; i < l; i++)//mischio per ogni carta
+            {
+                aus = mazzo.First();
+                mazzo.Remove(mazzo.First());
+                mazzo.Insert(rnd.Next(1, l), aus);
+            }
         }
 
-        private void estrai()
+        public Carta Estrai()
         {
-
+            //restituisco ed elimino
+            Carta aus = mazzo.First();
+            mazzo.RemoveAt(0);
+            return aus;
         }
     }
 }
