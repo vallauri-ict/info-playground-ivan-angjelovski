@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace _24_Gioco_Tresette
 {
-    class Carte
+    class Carte 
     {
         private string valore;
         private string seme;
@@ -27,7 +27,7 @@ namespace _24_Gioco_Tresette
             set => seme = value;
         }
 
-        private void Proponi()
+        public void Proponi()
         {
             Random rnd = new Random();
             Valore = valori[rnd.Next(0, valori.Length)];
