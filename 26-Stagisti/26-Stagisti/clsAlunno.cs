@@ -6,23 +6,45 @@ using System.Threading.Tasks;
 
 namespace _26_Stagisti
 {
-    class clsAlunno : clsPersona
+    class clsAlunno:clsPersona
     {
-        #region attributi 
-        private static int progressivo = 0;
+        #region Attributi
+        protected static int progressivo = 0;
         private readonly string matricola;
         private char classe;
         private char sezione;
         private string specializzazione;
         #endregion
 
-        #region properties 
-        public int Progressivo { get => progressivo; set => progressivo = value; }
+        public char Classe
+        {
+            get => classe;
+            set => classe = Convert.ToChar(value);
+        }
         public string Matricola => matricola;
-        public char Sezione { get => sezione; set => sezione = value; }
-        public char Classe { get => classe; set => classe = value; }
-        public string Specializzazione { get => specializzazione; set => specializzazione = value; }
-        #endregion
-
+        public char Sezione
+        {
+            get => sezione;
+            set => sezione = Convert.ToChar(value);
+        }
+        public string Specializzazione
+        {
+            get => specializzazione;
+            set => specializzazione = value;
+        }
+        public clsAlunno(string nome, string cognome, string città, char classe, string sezione, string spec)
+            : base(nome, cognome, città)
+        {
+            Classe = classe;
+            Specializzazione = spec;
+            Sezione = Convert.ToChar(sezione);
+            progressivo++;
+            matricola = "A" + progressivo.ToString().PadLeft(5, '0');
+        }
+        public override string visualizza()
+        {
+            return Matricola + " " + Nome + " " + Cognome + " " + Città + " " + Classe + " "
+                + Sezione + " " + Specializzazione;
+        }
     }
 }

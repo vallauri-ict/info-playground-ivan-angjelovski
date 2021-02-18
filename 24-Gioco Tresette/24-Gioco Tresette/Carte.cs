@@ -9,11 +9,21 @@ namespace _24_Gioco_Tresette
 {
     class Carte 
     {
-        private string valore;
         private string seme;
+        private string valore;
+        public string[] val = { "Asso", "2", "3", "4", "5", "6", "7", "Fante", "Regina", "Re" };
+        public string[] semi = { "Cuori", "Quadri", "Picche", "Fiori" };
 
-        private string[] valori = { "Asso", "2", "3", "4", "5", "6", "7", "Fante", "Regina", "Re" };
-        private string[] semi = { "Cuore", "Picche", "Fiore", "Quadri" };
+        public Carte()
+        {
+
+        }
+        public Carte(string valore, string seme)
+        {
+            Valore = valore;
+            Seme = seme;
+        }
+
 
         public string Valore
         {
@@ -25,14 +35,6 @@ namespace _24_Gioco_Tresette
         {
             get => seme;
             set => seme = value;
-        }
-
-        public void Proponi()
-        {
-            Random rnd = new Random();
-            Valore = valori[rnd.Next(0, valori.Length)];
-            Seme = semi[rnd.Next(0, semi.Length)];
-            MessageBox.Show(Valore + " " + Seme);
         }
     }
 }

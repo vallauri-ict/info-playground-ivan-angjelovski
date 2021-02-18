@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C897C99B-7115-4E07-A8CE-2263F5005414}</ProjectGuid>
+    <ProjectGuid>{E8A5B9DD-0BCC-4ACE-BF92-47D15BCA605A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>_26_Stagisti</RootNamespace>
-    <AssemblyName>26-Stagisti</AssemblyName>
+    <RootNamespace>_27_Interfaccia</RootNamespace>
+    <AssemblyName>27-Interfaccia</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,16 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsAlunno.cs" />
-    <Compile Include="clsElenco.cs" />
-    <Compile Include="clsPersona.cs" />
-    <Compile Include="clsStagista.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IDispAggiuntivo.cs" />
+    <Compile Include="MyComponent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

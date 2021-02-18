@@ -8,13 +8,12 @@ namespace _26_Stagisti
 {
     abstract class clsPersona
     {
-        #region attributi
-        protected string nome;
+        #region Attributi
+        private string nome;
         private string cognome;
         private string città;
         #endregion
 
-        #region properties
         public string Città
         {
             get => città;
@@ -30,9 +29,8 @@ namespace _26_Stagisti
                 }
             }
         }
-
-        public string Cognome 
-        { 
+        public string Cognome
+        {
             get => cognome;
             set
             {
@@ -46,7 +44,6 @@ namespace _26_Stagisti
                 }
             }
         }
-
         public string Nome
         {
             get => nome;
@@ -58,17 +55,16 @@ namespace _26_Stagisti
                 }
                 else
                 {
-                    throw new Exception("Nome non valida");
+                    throw new Exception("Nome non valido");
                 }
             }
         }
-        #endregion
-
         protected clsPersona(string nome, string cognome, string città)
         {
             Nome = nome;
             Cognome = cognome;
             Città = città;
         }
+        public abstract string visualizza();
     }
 }

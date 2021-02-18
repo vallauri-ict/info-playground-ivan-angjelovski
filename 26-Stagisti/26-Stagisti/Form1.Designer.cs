@@ -40,7 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cmbSezione = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbAzienda = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtOre = new System.Windows.Forms.TextBox();
@@ -168,17 +168,17 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Sezione";
             // 
-            // comboBox1
+            // cmbAzienda
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbAzienda.FormattingEnabled = true;
+            this.cmbAzienda.Items.AddRange(new object[] {
             "Azienda 1",
             "Azienda 2",
             "Azienda 3"});
-            this.comboBox1.Location = new System.Drawing.Point(343, 70);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 24);
-            this.comboBox1.TabIndex = 13;
+            this.cmbAzienda.Location = new System.Drawing.Point(343, 70);
+            this.cmbAzienda.Name = "cmbAzienda";
+            this.cmbAzienda.Size = new System.Drawing.Size(100, 24);
+            this.cmbAzienda.TabIndex = 13;
             // 
             // label7
             // 
@@ -271,7 +271,7 @@
             this.Controls.Add(this.btnInserisci);
             this.Controls.Add(this.txtOre);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbAzienda);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cmbSezione);
             this.Controls.Add(this.label5);
@@ -308,7 +308,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbSezione;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbAzienda;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtOre;

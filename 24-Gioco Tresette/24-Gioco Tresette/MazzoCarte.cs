@@ -12,61 +12,61 @@ namespace _24_Gioco_Tresette
 {
     class MazzoCarte : Carte
     {
-        private int i;
-        private List<Carte> lstCarte = new List<Carte>();
+        Random rnd = new Random();
+        private int progr = 0;
+        private List<Carte> mazzo = new List<Carte>();
 
-        public void InserisciCarta(Carte nuovaCarta)
+        public MazzoCarte()
         {
-            bool occorrenza = false;
-            foreach (var carta in lstCarte)
+            Carte aus = new Carte();
+            foreach (var seme in aus.semi)
             {
-                if((carta.Valore == nuovaCarta.Valore) && (carta.Seme == nuovaCarta.Seme))
+                foreach (var valore in aus.val)
                 {
-                    occorrenza = true;
+                    Carte carta = new Carte(valore, seme);
+                    mazzo.Add(carta);
                 }
             }
-            if(!occorrenza)
+        }
+
+        public void InserisciCarta(string valore, string seme)
+        {
+            Carte carta = new Carte();
+            carta.Seme = seme;
+            carta.Valore = valore;
+            if (mazzo.Find(bf => bf.Valore == valore && bf.Seme == seme) == null)
             {
-                lstCarte.Add(nuovaCarta);
+                mazzo.Add(carta);
+                System.Windows.Forms.MessageBox.Show("Carta inserita");
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Carta già presente");
             }
         }
 
-        public void DammiCarta()
+        public Carte DammiCarta()
         {
-            MessageBox.Show(lstCarte.First().Valore + " " + lstCarte.First().Seme);
+            Carte aus = mazzo.First();
+            mazzo.RemoveAt(0);
+            return aus;
         }
 
-        public void DammiCarta(Carte cartaRichiesta)
+        public int DammiCarta(string valore, string seme)
         {
+            Carte aus = mazzo.Find(bf => bf.Valore == valore && bf.Seme == seme);
+            return mazzo.IndexOf(aus);
         }
 
-        public void MescolaCarte()
+        public void Mescola()
         {
-            Carte[] mazzoMescolato = new Carte[lstCarte.Count];
-            Random rnd = new Random();
-            i = 0;
-
-            foreach (var carta in mazzoMescolato)
+            Carte app;
+            int length = mazzo.Count;
+            for (int i = 0; i < length; i++)
             {
-                carta.Seme = null;
-                carta.Valore = null;
-            }
-
-            foreach (var carta in lstCarte)
-            {
-                int n;
-                do
-                {
-                    n = rnd.Next(0, mazzoMescolato.Length);
-                }
-                while ((mazzoMescolato[n].Seme != null) && (mazzoMescolato[n].Valore != null));
-                mazzoMescolato[n] = carta;
-            }
-
-            lstCarte.Clear();
-            foreach (var carta in mazzoMescolato)
-            {
-                lstCarte.Add(carta);
+                app = mazzo.First();
+                mazzo.Remove(mazzo.First());
+                mazzo.Insert(rnd.Next(1, length), app);
             }
         }
     }
