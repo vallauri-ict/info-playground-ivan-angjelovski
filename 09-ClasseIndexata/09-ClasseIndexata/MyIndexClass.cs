@@ -23,7 +23,7 @@ namespace _09_ClasseIndexata
         // iteratore
         public string this[int pos]
         {
-            // metodo pubblico che restituisce una stringa 
+            // metodo pubblico che restituisce una stringa
             get { return elements[pos]; }
             set { elements[pos] = value; }
         }
