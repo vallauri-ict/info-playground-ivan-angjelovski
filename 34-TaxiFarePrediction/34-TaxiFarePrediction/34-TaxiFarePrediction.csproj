@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="data\" />
+    <Folder Include="Data\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,10 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="data\taxi-fare-test.csv">
+    <None Update="Data\taxi-fare-test.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="data\taxi-fare-train.csv">
+    <None Update="Data\taxi-fare-train.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
